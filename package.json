@@ -6,11 +6,14 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp buid"
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.1.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^8.0.0",
