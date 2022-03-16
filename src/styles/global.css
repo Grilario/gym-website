@@ -134,6 +134,12 @@ body {
   z-index: 30;
 
   background-color: var(--darkness-color);
+}
+
+.nav ul {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -267,11 +273,14 @@ footer {
     background: none;
     width: auto;
     height: auto;
-    display: initial;
 
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .nav ul {
+    display: initial;
   }
 
   .nav li {
