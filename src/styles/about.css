@@ -1,0 +1,118 @@
+.we-are .content{
+  padding: 5rem 3rem 8rem;
+}
+
+.we-are .title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.we-are .paragraph {
+  text-align: justify;
+}
+
+.we-are img {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.installations {
+  background-color: var(--black-color);
+  color: var(--ligth-color);
+}
+
+.installations svg {
+  width: 100%;
+  height: 10rem;
+}
+
+.installations .content {
+  padding: 5rem 3rem 8rem;
+  text-align: justify;
+}
+
+.embed-map {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  margin-bottom: 5rem;
+}
+
+.embed-map iframe {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.activities {
+  width: 100%;
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.activities-cards {
+  margin: 3rem 0 5rem;
+}
+
+.activity-card {
+  width: 100%;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.activity-card img {
+  width: 100%;
+}
+
+.activity-card .subtitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
+  color: var(--ligth-color);
+}
+
+@media (min-width: 880px) {
+  .we-are .content{
+    padding: 5rem 8rem 8rem;
+  }
+
+  .embed-map {
+    width: 60%;
+    padding-top: 50%;
+    margin: 0 auto 5rem;
+  }
+
+  .activities-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .activity-card {
+    margin: 0;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .grid-2 img {
+    margin-top: .5rem;
+  }
+
+  .embed-map {
+    width: 500px;
+    height: 0;
+    padding-top: 320px;
+    position: relative;
+    margin: 0 auto 5rem;
+  }
+}
