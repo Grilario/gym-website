@@ -49,10 +49,14 @@ gulp.task("image", () => {
     .pipe(gulp.dest("dist/images"));
 });
 
+gulp.task("favicon", () => {
+  return gulp.src("src/favicon.ico").pipe(gulp.dest("dist"));
+});
+
 export default function () {
   gulp.watch("src/styles/*.css", gulp.task("css"));
   gulp.watch("src/*.html", gulp.task("html"));
   gulp.watch("src/images/*", gulp.task("image"));
 }
 
-export const build = gulp.parallel("css", "html", "image");
+export const build = gulp.parallel("css", "html", "image", "favicon");
