@@ -1,0 +1,308 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #DE7800;
+  --primary-color-hover: #af5d00;
+  --black-color: #000000;
+  --black-color-hover: #272727;
+  --darkness-color: #181818;
+  --ligth-color: #ffffff;
+  --ligth-color-hover: #6e6e6e;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+
+  background-color: var(--black-color);
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.title, .subtitle, .phrase {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.6rem;
+}
+
+.subtitle, .phrase {
+  font-size: 2.4rem;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}
+
+.link {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ligth-color);
+  transition: color 200ms ease;
+}
+
+.description {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  
+  color: var(--ligth-color);
+  background-color: var(--primary-color);
+  padding: 1.6rem 2rem;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.content {
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--black-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.logo a{
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo h1 {
+  display: none;
+}
+
+.menu-button label {
+  cursor: pointer;
+}
+
+.nav {
+  width: 100%;
+  height: 40vh;
+  position: absolute;
+  left: 0;
+  top: -40vh;
+  z-index: 30;
+
+  background-color: var(--darkness-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: top 300ms ease-in-out; 
+}
+
+.check {
+  display: none;
+}
+
+.check:checked + .nav {
+  top: 60px;
+}
+
+.nav li {
+  list-style: none;
+  
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li:nth-child(2) {
+  border-top: 1px solid var(--ligth-color);
+  border-bottom: 1px solid var(--ligth-color);
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: var(--black-color);
+}
+
+.box-title {
+  width: 100%;
+  position: relative;
+}
+
+.box-title svg {
+  width: 100%;
+  height: 12rem;
+}
+
+.box-title .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--ligth-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box-title .title {
+  max-width: 20ch;
+}
+
+.communication-cards {
+  padding: 0 0 8rem;
+}
+
+.communication-card {
+  max-width: 40ch;
+  margin: 5rem auto 0;
+
+  text-decoration: none;
+  text-align: center;
+  color: var(--ligth-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.communication-card .icon {
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.communication-card .paragraph {
+  margin: .8rem 0 2rem;
+}
+
+/* Medias Querys */
+
+@media (min-width: 880px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 2.6rem;
+  }
+
+  .phrase {
+    font-size: 3.8rem;
+  }
+  
+  .description {
+   font-size: 2.2rem;
+  }
+  
+  .button {
+    font-size: 2.2rem;
+  }
+
+  .content {
+    padding: 0 8rem;
+  }
+
+  /* Header */
+  .menu-button {
+    display: none;
+  }
+
+  .check:checked + .nav {
+    top: 50%;
+  }
+
+  .nav {
+    transition: none;
+    background: none;
+    width: auto;
+    height: auto;
+    display: initial;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav li {
+    width: auto;
+    flex: none;
+    margin: 0 1.5rem;
+
+    display: inline;
+  }
+
+  .nav a:hover {
+    color: var(--ligth-color-hover);
+  }
+
+  .nav li:nth-child(2) {
+    border: none;
+  }
+
+  /* Footer */
+
+  .communication-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding: 5rem 3rem 8rem;
+  }
+
+  .communication-card {
+    margin: 0;
+    display: initial;
+    text-align: start;
+  }
+}

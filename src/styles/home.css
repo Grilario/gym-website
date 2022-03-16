@@ -1,0 +1,242 @@
+.catchy-phrase {
+  width: 100%;
+  height: 725px;
+  position: relative;
+}
+
+.catchy-phrase .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  color: var(--ligth-color);
+  text-align: center;
+}
+
+.catchy-phrase .phrase {
+  margin-bottom: 3rem;
+}
+
+.you-need {
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.quality-cards {
+  margin-top: 4rem;
+}
+
+.quality-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 6rem;
+}
+
+.quality-card img {
+  width: 11rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quality-card .subtitle {
+  margin: 3rem 0 1.5rem;
+  max-width: 20ch;
+}
+
+.quality-card .paragraph {
+  max-width: 23ch;
+}
+
+.extensive-area,
+.last-generation-equip,
+.qualified-team {
+  width: 100%;
+  height: 725px;
+  position: relative;
+
+  padding: 8rem 0;
+}
+
+.extensive-area .content,
+.last-generation-equip .content,
+.qualified-team .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  color: var(--ligth-color);
+  text-align: center;
+}
+
+.extensive-area .content .description,
+.last-generation-equip .content .description,
+.qualified-team .content .description {
+  max-width: 25ch;
+}
+
+.extensive-area .phrase,
+.last-generation-equip .phrase,
+.qualified-team .phrase {
+  margin-bottom: 2rem;
+  max-width: 15ch;
+}
+
+.extensive-area::after,
+.last-generation-equip::after,
+.qualified-team::after {
+  content: "";
+  width: 100%;
+  height: calc(725px / 2);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.activities {
+  width: 100%;
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.activities-cards {
+  margin: 3rem 0 5rem;
+}
+
+.activity-card {
+  width: 100%;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.activity-card img {
+  width: 100%;
+}
+
+.activity-card .subtitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
+  color: var(--ligth-color);
+}
+
+.doubts {
+  width: 100%;
+  background-color: var(--black-color);
+  color: var(--ligth-color);
+  text-align: center;
+  padding: 13rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doubts .title {
+  max-width: 15ch;
+  margin-bottom: 4rem;
+}
+
+/* Media Querys */
+
+@media (min-width: 880px) {
+  .catchy-phrase .content {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .catchy-phrase .phrase {
+    margin-bottom: 5rem;
+  }
+
+  .you-need .title {
+    margin: 0 auto;
+    max-width: 20ch;
+  }
+
+  .quality-cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 3rem;
+
+    margin-top: 6rem;
+  }
+
+  .quality-card {
+    margin: 0;
+  }
+
+
+  .extensive-area .content,
+  .qualified-team .content{
+    align-items: flex-start;
+    justify-content: center;
+    text-align: start;
+  }
+
+  .extensive-area::after,
+  .qualified-team::after {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 8),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .last-generation-equip .content {
+    align-items: flex-end;
+    justify-content: center;
+    text-align: end;
+  }
+
+  .last-generation-equip::after {
+    width: 60%;
+    height: 100%;
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 8),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .activities-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .activity-card {
+    margin: 0;
+    max-width: 350px;
+  }
+}
